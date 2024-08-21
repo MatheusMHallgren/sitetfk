@@ -10,9 +10,9 @@ let contadorindex = 0;
 
 // Função para mudar a imagem de fundo
 function changeBackgroundImage() {
-    const header = document.querySelector('header');
-    if (header) {
-        header.style.backgroundImage = images[contadorindex];
+    const alterar_img = document.querySelector('.header_img');
+    if (alterar_img) {
+        alterar_img.style.backgroundImage = images[contadorindex];
         contadorindex = (contadorindex + 1) % images.length;
     }
 }
@@ -21,16 +21,17 @@ setInterval(changeBackgroundImage, 5000);
 // Muda a imagem ao carregar a página
 changeBackgroundImage();
 // ############################## MUDANÇA DE IMAGEM ##################################
+
 // ############################## BARRA DE NAVEGAÇÃO #################################
-window.addEventListener('scroll', function() {
-    const navbar = document.querySelector('.nav_div');
-    const fundo = document.querySelector('.fundo');
-    if (window.scrollY > 50) { // Ajuste o valor conforme necessário
-        navbar.classList.add('atv');
-        fundo.classList.add('atv');
-    } else {
-        navbar.classList.remove('atv');
-        fundo.classList.remove('atv');
-    }
-});
+// window.addEventListener('scroll', function() {
+//     const navbar = document.querySelector('.nav_div');
+//     const fundo = document.querySelector('.fundo');
+//     if (window.scrollY > 50) { // Ajuste o valor conforme necessário
+//         navbar.classList.add('atv');
+//         fundo.classList.add('atv');
+//     } else {
+//         navbar.classList.remove('atv');
+//         fundo.classList.remove('atv');
+//     }
+// });
 // ############################## MUDANÇA DE IMAGEM ##################################
